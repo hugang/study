@@ -1,6 +1,6 @@
 # Docker
 
-![img](assets/-docker-logo.png)
+![img](assets/docker-logo.png)
 
 
 
