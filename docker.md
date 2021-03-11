@@ -382,3 +382,5 @@ services:
 
 
 > Jenkins : Git parameters + publish + Persistent Parameter
+
+[持续集成](cicd.md)
