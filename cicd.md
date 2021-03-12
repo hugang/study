@@ -1,5 +1,6 @@
 # 通过Docker搭建的基于版本管理的持续发布环境。
 
+# 第一部分，搭建服务器
 ## 1 组成部分
 
 - nginx
@@ -157,20 +158,36 @@ services:
       - ./data:/usr/local/tomcat/webapps    #映射数据
 ```
 
+# 第二部分，配置源代码和CICD
+
 ## 6 创建ssm工程并提交
 
 ```sh
 mvn archetype:generate -DgroupId=com.hugang -DartifactId=ssm -DarchetypeArtifactId=maven-archetype-webapp -DinteractiveMode=false
 ```
 
-## 7 jenkins配置
+## 7 jenkins配置CI
 
 - 配置Java
 
 - 配置Maven
 
-- 配置插件（Git Parameter, Publish over ssh)
+- 配置插件（Publish over ssh)
 
 - 配置Git
+
+- 配置Triggers (Trigger builds remotely)
+
+- 配置Build和Post-build Action
+
+- 配置Gitea的Webhook
+  http://hg:hg@192.168.0.117/jenkins/job/ssm-ci/build?token=111818430cfe05c9eef6c8c1309606b3af GET
+
+
+## 8 jenkins配置CD
+
+- 配置插件（Git Parameter, Publish over ssh)
+
+- 配置Git (使用Tag)
 
 - 配置Build和Post Build
