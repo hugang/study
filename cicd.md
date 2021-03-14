@@ -191,3 +191,11 @@ mvn archetype:generate -DgroupId=com.hugang -DartifactId=ssm -DarchetypeArtifact
 - 配置Git (使用Tag)
 
 - 配置Build和Post Build
+
+## 效果图
+
+<table>
+<tr><td><img src="./assets/ci-1.png" /></td><td><img src="./assets/ci-2.png" /></td></tr>
+<tr><td><img src="./assets/ci-3.png" /></td><td></td></tr>
+<tr><td><img src="./assets/cd-1.png" /></td><td><img src="./assets/cd-2.png" /></td></tr>
+</table>
