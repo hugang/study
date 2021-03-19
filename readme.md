@@ -2,4 +2,4 @@
 
 - [Docker](./docker.md)
 
-- [持续集成](./cicd.md)
+- [CI-CD](ci-cd/cicd.md)

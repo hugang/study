@@ -192,10 +192,24 @@ mvn archetype:generate -DgroupId=com.hugang -DartifactId=ssm -DarchetypeArtifact
 
 - 配置Build和Post Build
 
+## 注意点
+```shell
+# nginx
+> nginx: [emerg] open() "/etc/nginx/nginx.conf" failed (13: Permission denied)
+原因はSeLinux、/etc/selinux/config enforcingからpermissiveへ変更し、再起動
+```
+```shell
+# 防火墙
+firewall-cmd --add-service=http --zone=public --permanent
+firewall-cmd --add-port=3000/tcp --zone=public --permanent
+firewall-cmd --reload
+```
+
+
 ## 效果图
 
 <table>
-<tr><td><img src="./assets/ci-1.png" /></td><td><img src="./assets/ci-2.png" /></td></tr>
-<tr><td><img src="./assets/ci-3.png" /></td><td></td></tr>
-<tr><td><img src="./assets/cd-1.png" /></td><td><img src="./assets/cd-2.png" /></td></tr>
+<tr><td><img src="../assets/ci-1.png" /></td><td><img src="../assets/ci-2.png" /></td></tr>
+<tr><td><img src="../assets/ci-3.png" /></td><td></td></tr>
+<tr><td><img src="../assets/cd-1.png" /></td><td><img src="../assets/cd-2.png" /></td></tr>
 </table>
